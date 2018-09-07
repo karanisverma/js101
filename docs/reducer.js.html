@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>generator.js - Documentation</title>
+    <title>reducer.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">generator.js</h1>
+    <h1 class="page-title">reducer.js</h1>
     
 
     
@@ -39,27 +39,18 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Generate numbers in the Fibonacci sequence.
- *
- * @generator
- * @function fibonacci
- * @yields {number} The next number in the Fibonacci sequence.
- */
+            <pre class="prettyprint source linenums"><code>/** Reducer is a method which excute in each param of memeber of a Array.
+* @reducer
+* @function reducerSum
+*/
 
-function* fibonacci() {
-    let [prev, curr] = [0, 1];
-    while (true) {
-      [prev, curr] = [curr, prev + curr];
-      yield curr;
-    }
-  }
-  for (let n of fibonacci()) {
-    console.log(n);
-    if (n >= 1000) {
-      break;
-    }
-  }</code></pre>
+var initialValue = 0;
+var sum = [{x: 1}, {x:2}, {x:3}].reduce(
+    (accumulator, currentValue) => accumulator + currentValue.x
+    ,initialValue
+);
+
+console.log(sum) // logs 6</code></pre>
         </article>
     </section>
 
