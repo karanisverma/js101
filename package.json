@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "dependencies": {
+    "jsdoc": "^3.5.5"
+  },
+  "devDependencies": {
+    "minami": "^1.2.3"
+  }
+}
